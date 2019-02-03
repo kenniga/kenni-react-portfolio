@@ -9,6 +9,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from '@material-ui/core/Button';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
@@ -28,6 +29,9 @@ class Home extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
           <h1>React.js News</h1>
+          <Button variant="contained" color="primary">
+            Hello World
+          </Button>
           {this.props.news.map(item => (
             <article key={item.link} className={s.newsItem}>
               <h1 className={s.newsTitle}>
